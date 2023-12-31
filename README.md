@@ -6,13 +6,12 @@
     - (2nd edition): [英文版](https://www.amazon.com/-/zh_TW/Jules-Damji-dp-1492050040/dp/1492050040/ref=dp_ob_title_bk)
 
 # P.S
-- 下面是我的 `.bash_profile` 的內容, 會讓 Spark 使用 python 3.9 
+- 下面是我的 `.bash_profile` 的內容, 會讓 Spark 使用 python 3.9 (我的 spark 裝在 `/opt/spark/latest/`)
 
 ```
 export SPARK_HOME=/opt/spark/latest/
 export PYSPARK_PYTHON=python3.9
 export PYSPARK_DRIVER_PYTHON=python3.9
 
-# Added by serverless binary installer
 export PATH="$SPARK_HOME/bin:$PATH"
 ```
