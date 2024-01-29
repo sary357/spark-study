@@ -93,6 +93,17 @@ only showing top 10 rows
 
 scala> strings.count()
 res2: Long = 18
+scala> import org.apache.spark.sql.functions._
+import org.apache.spark.sql.functions._
+
+scala> val strings=spark.read.text("/home/ec2-user/spark/ch2/README.md")
+strings: org.apache.spark.sql.DataFrame = [value: string]
+
+scala> val filtered=strings.filter(col("value").contains("Hilton"))
+filtered: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] = [value: string]
+
+scala> filtered.count()
+res0: Long = 6                                                                  
 ```
 
 ## pyspark
@@ -128,5 +139,8 @@ only showing top 10 rows
 >>> strings.count()
 18                                                                              
 >>> 
-
+>>> strings=spark.read.text('/home/ec2-user/spark/ch2/README.md')
+>>> filster=strings.filter(strings.value.contains("Hilton"))
+>>> filster.count()
+6
 ```
