@@ -47,7 +47,8 @@ Using Python version 3.9.16 (main, Sep  8 2023 00:00:00)
 Spark context Web UI available at http://ip-172-17-1-163.ec2.internal:4040
 Spark context available as 'sc' (master = spark://ip-172-17-1-163.ec2.internal:7077, app id = app-20240129065634-0001).
 SparkSession available as 'spark'.
->>> 
+>>> spark.version
+'3.5.0' 
 
 ```
 - Step 2: check Web UI: http://HOSTNAME:8080 again
