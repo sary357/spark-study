@@ -24,9 +24,10 @@ $ cd sbin
 ```
 $ sh start-all.sh
 ```
+- Step 4. check Web UI: http://HOSTNAME:8080
 
-## 2. run interactive command like `pyspark --master spark://HOSTNAME:7077`
-- 
+## run interactive command and verify
+- Step 1: execute the command `pyspark --master spark://HOSTNAME:7077`
 ```
 $ pyspark --master spark://`hostname`:7077
 Python 3.9.16 (main, Sep  8 2023, 00:00:00) 
@@ -49,4 +50,4 @@ SparkSession available as 'spark'.
 >>> 
 
 ```
-## 3. check Web UI: http://HOSTNAME:8080
+- Step 2: check Web UI: http://HOSTNAME:8080 again
