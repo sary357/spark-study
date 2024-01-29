@@ -10,7 +10,7 @@ $ ssh-keygen
 $ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys 
 ```
 
-## 1. Launching a Spark master (standalone mode)
+## 1. Launch a Spark master (standalone mode)
 - Assume spark is installed in the folder: `/opt/spark/spark-3.5.0-bin-hadoop3`
 - Step 1: go to spark folder
 ```
@@ -26,7 +26,7 @@ $ sh start-all.sh
 ```
 - Step 4. check Web UI: http://HOSTNAME:8080
 
-## run interactive command and verify
+## 2. Run interactive command and verify
 - Step 1: execute the command `pyspark --master spark://HOSTNAME:7077`
 ```
 $ pyspark --master spark://`hostname`:7077
