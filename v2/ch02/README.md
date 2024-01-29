@@ -26,8 +26,8 @@ $ sh start-all.sh
 ```
 - Step 4. check Web UI: http://HOSTNAME:8080
 
-## 2. Run interactive command and verify
-- Step 1: execute the command `pyspark --master spark://HOSTNAME:7077`
+## 2. Run interactive commands `pyspark` or `spark-shell`, then verify
+- Step 1: execute the command `pyspark` or `spark-shell` with `--master spark://HOSTNAME:7077`
 ```
 $ pyspark --master spark://`hostname`:7077
 Python 3.9.16 (main, Sep  8 2023, 00:00:00) 
@@ -49,6 +49,28 @@ Spark context available as 'sc' (master = spark://ip-172-17-1-163.ec2.internal:7
 SparkSession available as 'spark'.
 >>> spark.version
 '3.5.0' 
+```
+or
+```
+$ spark-shell --master spark://`hostname`:7077
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+24/01/29 07:06:47 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Spark context Web UI available at http://ip-172-17-1-163.ec2.internal:4040
+Spark context available as 'sc' (master = spark://ip-172-17-1-163.ec2.internal:7077, app id = app-20240129070648-0002).
+Spark session available as 'spark'.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 3.5.0
+      /_/
+         
+Using Scala version 2.12.18 (OpenJDK 64-Bit Server VM, Java 17.0.10)
+Type in expressions to have them evaluated.
+Type :help for more information.
 
+scala> spark.version
+res0: String = 3.5.0
 ```
 - Step 2: check Web UI: http://HOSTNAME:8080 again
