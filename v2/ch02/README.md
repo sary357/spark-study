@@ -24,7 +24,7 @@ $ cd sbin
 ```
 $ sh start-all.sh
 ```
-- Step 4. check Web UI: http://HOSTNAME:8080
+- Step 4. check Web UI (Spark master URL): http://HOSTNAME:8080
 
 ## 2. Run interactive commands `pyspark` or `spark-shell`, then verify
 - Step 1: execute the command `pyspark` or `spark-shell` with `--master spark://HOSTNAME:7077`
@@ -73,7 +73,7 @@ Type :help for more information.
 scala> spark.version
 res0: String = 3.5.0
 ```
-- Step 2: check Web UI: http://HOSTNAME:8080 again
+- Step 2: check Web UI: http://HOSTNAME:8080 (Spark master URL) and http://HOSTNAME:4040/ (Job status URL)
 
 -----
 
