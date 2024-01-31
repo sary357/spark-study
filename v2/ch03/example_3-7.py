@@ -1,8 +1,6 @@
 from pyspark.sql import SparkSession
 
-
-# sf-fire-calls.csv: data from https://data.sfgov.org/Public-Safety/Fire-Incidents/wr8u-xric/data
-# sf-fire-calls-sample.csv: only 200 records
+# book: P.59
 
 if __name__ == "__main__":
     spark=SparkSession.builder.appName("Example-3_7").getOrCreate()
