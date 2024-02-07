@@ -20,7 +20,7 @@ Spark context Web UI available at http://ip-172-17-1-163.ec2.internal:4040
 Spark context available as 'sc' (master = spark://ip-172-17-1-163.ec2.internal:7077, app id = app-20240206075535-0003).
 SparkSession available as 'spark'.
 >>> from pyspark.ml import image
->>> image_folders="/home/ec2-user/spark/ch4/images"
+>>> image_folders="/home/ec2-user/spark/ch04/images"
 >>> image_df=spark.read.format("image").load(image_folders)
 >>> image_df.printSchema()
 root
@@ -35,7 +35,7 @@ root
 +----------------------------------------------------------+------+-----+---------+
 |origin                                                    |height|width|nChannels|
 +----------------------------------------------------------+------+-----+---------+
-|file:///home/ec2-user/spark/ch4/images/home-simpson-2.jpeg|1390  |674  |3        |
+|file:///home/ec2-user/spark/ch04/images/home-simpson-2.jpeg|1390  |674  |3        |
 +----------------------------------------------------------+------+-----+---------+
 only showing top 1 row
 
@@ -43,7 +43,7 @@ only showing top 1 row
 +----------------------------------------------------------+------+-----+---------+----+
 |origin                                                    |height|width|nChannels|mode|
 +----------------------------------------------------------+------+-----+---------+----+
-|file:///home/ec2-user/spark/ch4/images/home-simpson-2.jpeg|1390  |674  |3        |16  |
+|file:///home/ec2-user/spark/ch04/images/home-simpson-2.jpeg|1390  |674  |3        |16  |
 +----------------------------------------------------------+------+-----+---------+----+
 only showing top 1 row
 
@@ -63,8 +63,8 @@ root
 +--------------------------------------------------------+-----------------------+------+
 |path                                                    |modificationTime       |length|
 +--------------------------------------------------------+-----------------------+------+
-|file:/home/ec2-user/spark/ch4/images/home-simpson-2.jpeg|2024-02-06 03:03:10.735|59859 |
-|file:/home/ec2-user/spark/ch4/images/home-simpson-1.jpeg|2024-02-06 03:03:11.755|7565  |
+|file:/home/ec2-user/spark/ch04/images/home-simpson-2.jpeg|2024-02-06 03:03:10.735|59859 |
+|file:/home/ec2-user/spark/ch04/images/home-simpson-1.jpeg|2024-02-06 03:03:11.755|7565  |
 +--------------------------------------------------------+-----------------------+------+
 
 >>>

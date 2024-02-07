@@ -19,7 +19,7 @@ Using Python version 3.9.16 (main, Sep  8 2023 00:00:00)
 Spark context Web UI available at http://ip-172-17-1-163.ec2.internal:4040
 Spark context available as 'sc' (master = spark://ip-172-17-1-163.ec2.internal:7077, app id = app-20240205022807-0000).
 SparkSession available as 'spark'.
->>> file_path="/home/ec2-user/spark/ch4/data/departuredelays.csv"
+>>> file_path="/home/ec2-user/spark/ch04/data/departuredelays.csv"
 >>> schema="`date` STRING, `delay` INT, `distance` STRING, `origin` STRING, `destination` STRING"
 >>> df=spark.read.format("csv").load(file_path, inferSchema=False, schema=schema,header=True)
 >>> df.show(10)
@@ -42,7 +42,7 @@ only showing top 10 rows
 ```
 # header: 第一行是不是欄位名稱, True 代表是
 # mode FAILFAST: 如果有錯誤就跳出
->>> df=spark.sql("create or replace temporary view us_delay_flight_tble using csv options (path '/home/ec2-user/spark/ch4/data/departuredelays.csv', header 'True', inferSchema 'true', mode 'FAILFAST')")
+>>> df=spark.sql("create or replace temporary view us_delay_flight_tble using csv options (path '/home/ec2-user/spark/ch04/data/departuredelays.csv', header 'True', inferSchema 'true', mode 'FAILFAST')")
 >>> spark.sql("select * from us_delay_flight_tble").show(10)
 +-------+-----+--------+------+-----------+
 |   date|delay|distance|origin|destination|

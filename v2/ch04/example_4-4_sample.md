@@ -2,9 +2,9 @@
 ### JSON
 
 ```
->>> spark.read.format("json").load("/home/ec2-user/spark/ch4/data/json")
+>>> spark.read.format("json").load("/home/ec2-user/spark/ch04/data/json")
 DataFrame[DEST_COUNTRY_NAME: string, ORIGIN_COUNTRY_NAME: string, count: bigint]
->>> df2=spark.read.format("json").load("/home/ec2-user/spark/ch4/data/json")
+>>> df2=spark.read.format("json").load("/home/ec2-user/spark/ch04/data/json")
 >>> df2.show(10)
 +-----------------+-------------------+-----+
 |DEST_COUNTRY_NAME|ORIGIN_COUNTRY_NAME|count|
@@ -25,7 +25,7 @@ only showing top 10 rows
 ```
 ### read JSON files into SQL tables (p.100)
 ```
->>> spark.sql("create or replace temporary view us_delay_flight_tbl_1 using json options (path '/home/ec2-user/spark/ch4/data/json')")
+>>> spark.sql("create or replace temporary view us_delay_flight_tbl_1 using json options (path '/home/ec2-user/spark/ch04/data/json')")
 DataFrame[]
 >>> spark.sql("select * from us_delay_flight_tbl_1").show(10)
 +-----------------+-------------------+-----+
