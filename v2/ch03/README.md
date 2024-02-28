@@ -138,3 +138,26 @@ only showing top 2 rows
 +---+---------+-------+-----------------+---------+-----+--------------------+
 
 ```
+
+-----
+```
+### P.57
+## Row is an indexed object 
+## blog_row[0] => 6
+## blog_row[1] => "Reynold"
+>>> blog_row=Row(6, "Reynold", "Xin", "https://tinyurl.6", 25568, "3/2/2015", ["twitter","LinkedIn"])
+>>> blog_row[1]
+'Reynold'
+
+## we can create a DataFrame from multiple Rows 
+>>> rows=[Row("Matei Zaharia", "CA"), Row("Reynold Xin", "CA")]
+>>> authors_df=spark.createDataFrame(rows, ["Author", "State"])
+>>> authors_df.show()
++-------------+-----+
+|       Author|State|
++-------------+-----+
+|Matei Zaharia|   CA|
+|  Reynold Xin|   CA|
++-------------+-----+
+
+```
