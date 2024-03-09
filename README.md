@@ -9,7 +9,7 @@
 - 下面是我的 `.bash_profile` 的內容, 會讓 Spark 使用 python 3.11 (我的 spark 裝在 `/opt/spark/latest/`)
 
 ```
-export SPARK_HOME=/opt/spark/latest/
+export SPARK_HOME=/home/sary357/spark/latest/
 export PYSPARK_PYTHON=python3.11
 export PYSPARK_DRIVER_PYTHON=python3.11
 
