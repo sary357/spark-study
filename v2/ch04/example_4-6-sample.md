@@ -58,6 +58,7 @@ root
  |-- length: long (nullable = true)
  |-- content: binary (nullable = true)
 
+## "pathGlobFilter": means we'd like to filter jpeg files
 >>> image_df=spark.read.format("binaryFile").option("pathGlobFilter","*jpeg").option("recursiveFileLookup","true").load(image_folders)
 >>> image_df.select("path","modificationTime","length").show(2,truncate=False)
 +--------------------------------------------------------+-----------------------+------+

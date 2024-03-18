@@ -86,6 +86,15 @@ DataFrame[]
 [Column(name='date', description=None, dataType='int', nullable=True, isPartition=False, isBucket=False), Column(name='delay', description=None, dataType='int', nullable=True, isPartition=False, isBucket=False), Column(name='distance', description=None, dataType='int', nullable=True, isPartition=False, isBucket=False), Column(name='origin', description=None, dataType='string', nullable=True, isPartition=False, isBucket=False), Column(name='destination', description=None, dataType='string', nullable=True, isPartition=False, isBucket=False)]
 ```
 
+## sample codes (P.94)
+```
+## If I have a table ""managed_us_delay_flights_tbl"" and hope to load into a dataframe
+>>> df=spark.table("managed_us_delay_flights_tbl")
+>>> df.show(10)
+
+```
+
+
 ## Sample codes (P.95)
 
 ```
